@@ -5,12 +5,20 @@
 
 ## Installation
 
-```sh
-$ git clone https://github.com/stephenmathieson/git-sync.git /tmp/git-sync
-$ cd /tmp/git-sync
-$ make install
-$ cd -
-```
+    $ git clone https://github.com/stephenmathieson/git-sync.git /tmp/git-sync
+    $ cd /tmp/git-sync
+    $ make install
+    $ cd -
+
+## Usage
+
+  Sync with upstream / master:
+
+    $ git sync
+
+  Get current git-sync version:
+
+    $ git sync -v|--version
 
 ## License 
 
