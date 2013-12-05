@@ -1,0 +1,23 @@
+#!/bin/bash
+
+#
+# git-sync
+#
+# Copyright (c) 2013 Stephen Mathieson
+# MIT licensed
+#
+
+VERSION="0.0.1"
+
+if [[ "$1" == "-v" ]] || [[ "$1" == "--version" ]]; then
+  echo $VERSION && exit 0
+fi
+
+upstream="`git config --get remote.upstream.url`"
+
+if [ -z $upstream ]; then
+  echo "Missing upstream remote"
+  exit 1
+fi
+
+git pull upstream master
